@@ -18,13 +18,16 @@ export const getStudents = () => {
 }
 
 export const addStudentsAPI = (newStudentData) => {
-    mockStudentDb.push(newStudentData);
-    return newStudentData;
+    const savedStudent = {
+        id: Date.now(),     
+        ...newStudentData
+    };
+    mockStudentDb.push(savedStudent);
+    console.log("Returned Saved Object: ", savedStudent);
 }
 
 console.log("Initial DB State: ", getStudents());
 addStudentsAPI({
-    id: 1,
     firstName: 'John',
     lastName: 'AWS',
     email: 'john.aws@example.com'

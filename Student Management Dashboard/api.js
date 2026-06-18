@@ -24,6 +24,7 @@ export const addStudentsAPI = (newStudentData) => {
     };
     mockStudentDb.push(savedStudent);
     console.log("Returned Saved Object: ", savedStudent);
+    return savedStudent;
 }
 
 console.log("Initial DB State: ", getStudents());

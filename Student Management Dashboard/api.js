@@ -79,7 +79,7 @@ studentForm.addEventListener('submit', (event) => {
 });
 
 const initApp = () => {
-    localStudent.push(...mockStudentDb);
+    localStudent.push(...mockStudentDb);    // Push initial data from mockStudentDb
     renderTable(localStudent);
 }
 
